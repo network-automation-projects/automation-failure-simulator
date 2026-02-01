@@ -12,6 +12,17 @@ A Python tool that demonstrates resilient automation design by simulating real-w
 - **Concurrent Execution**: Processes multiple devices in parallel
 - **Detailed Reporting**: Summarizes outcomes, retry attempts, and statistics
 
+## Why This Matters in Real Automation
+
+In real network and infrastructure automation, failures are not exceptional — they are expected. This simulator demonstrates how to design automation that continues operating under partial failure, retries safely, and reports outcomes clearly instead of failing fast or masking errors.
+
+## Design Tradeoffs
+
+- Uses threads instead of async for simplicity and clarity
+- In-memory simulation avoids external dependencies
+- Retry logic is centralized rather than per-device to keep behavior consistent
+- Failure types are randomized rather than scripted to simulate unpredictability
+
 ## Installation
 
 No external dependencies required - uses only Python standard library (3.9+).
